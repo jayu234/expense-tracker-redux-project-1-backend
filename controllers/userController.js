@@ -21,7 +21,7 @@ const passParams = {
 }
 exports.registerNewUser = catchAsyncErrors(async (req, res, next) => {
 
-    await check('name', "Please provide a valid name!").isLength({ min: 3, max: 7 }).run(req);
+    await check('name', "Please provide a valid name!").isLength({ min: 3 }).run(req);
     await check('email', "Please provide valid email address!").isEmail().run(req);
     await check('password', "Please choose a valid password. Must be 8 characters long and contain a lowercase character, uppercase character, number, a special character from ( !, @, #, $, %, ^, &, *)").isStrongPassword(passParams).run(req);
 
