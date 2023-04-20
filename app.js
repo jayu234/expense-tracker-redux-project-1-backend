@@ -7,8 +7,8 @@ dotenv.config({path: "config/config.env"});
 
 app.use(express.json());
 app.use(cors({
-    origin: process.env.FRONTEND_URL,
     credentials: true,
+    origin: process.env.FRONTEND_URL,
 }))
 app.use(cookieParser());
 
