@@ -16,8 +16,8 @@ const errorMiddleware = require("./middleware/error");
 const trasactionsRutes = require('./routes/trasactionRoute');
 const userRoutes = require('./routes/userRoute');
 
-app.use('/api/v1/', trasactionsRutes);
-app.use('/api/v1/', userRoutes);
+app.use('/api/v1', trasactionsRutes);
+app.use('/api/v1', userRoutes);
 app.use(errorMiddleware);
 
 module.exports = app;
