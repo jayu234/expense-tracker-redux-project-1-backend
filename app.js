@@ -8,7 +8,7 @@ dotenv.config({path: "config/config.env"});
 app.use(express.json());
 app.use(cors({
     credentials: true,
-    origin: "https://money-trackerr.netlify.app/",
+    origin: process.env.FRONTEND_URL,
 }))
 app.use(cookieParser());
 
